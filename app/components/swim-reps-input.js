@@ -79,5 +79,35 @@ export default Ember.Component.extend({
         'no push-off',
         '3 x effort + 1 x recovery',
         // et al.
-    ]
+    ],
+
+    // component lifecycle guarantees to run init() prior to didInsertElement()
+    init() {
+        this._super(...arguments);  // indirectly extends Ember.Object
+        // must not initialise ref type property statically or else shared by all instances (sic!)
+        this.widgetMap = new Map();
+    },
+
+    didInsertElement() {
+            // searching DOM subtree for this component instance only
+            for (let widget of this.$('select')) {  // !== null by template design
+                this.widgetMap.set(widget.attributes['name'].value, widget);
+            }
+    },
+
+    actions: {
+        addReps() {
+            // this.widgetMap.forEach(console.log, console);
+            // XXX (unlikely) race condition of button click preceding didInsertElement() event?
+            let item = {};
+            this.widgetMap.forEach(
+                function(v, k) {
+                    item[k] = v.value;  // capture currently selected value from each drop-down menu
+                }
+            );
+            // implicitly notify view of change and re-render list
+            this.get('totalSet').pushObject(item);
+            return false;  // do not bubble further
+        }
+    }
 });

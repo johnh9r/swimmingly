@@ -1,6 +1,8 @@
 # Swimmingly
 
-This is a toy application to explore the Ember.js framework.  As such, it does not do anything useful (yet).
+* This is a toy application to explore the Ember.js framework.  As such, it does not do anything useful (yet).
+* The implementation is based purely on self-study of the [Ember Guides](https://guides.emberjs.com/v2.4.0/)
+* As an initial exploration of Ember.js and JavaScript, this may well *not* follow best practice is various regards.
 
 ## Prerequisites
 
