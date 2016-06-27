@@ -1,1 +1,15 @@
+<form name="session">
+<button>Save</button>
+<fieldset>
+    <legend>Session</legend>
+    Venue: {{input id='venue' type='text' placeholder='Aquadrome'}}
+    Date: {{input id='date' type='date' placeholder='2016-06-27'}}
+    <br/>
+    Lane: {{input id='lane' type='number' value=1 min=1 max=4}}
+    Coach: {{input id='coach' type='text' placeholder='Heather A'}}
+</fieldset>
+</form>
+{{!-- do not nest forms, which incrementally populate model in separate submissions --}}
+{{swim-reps-input setName='Warmup' totalSet=model.warmupSet}}
 {{swim-reps-input setName='Main' totalSet=model.mainSet}}
+{{swim-reps-input setName='Cooldown' totalSet=model.cooldownSet}}
