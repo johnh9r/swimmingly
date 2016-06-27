@@ -1,0 +1,19 @@
+<h3>{{setName}}</h3>
+
+<ul>
+{{#each totalSet as |rep|}}
+    <li>{{rep.numReps}} x {{rep.distance}} of {{rep.stroke}} on {{rep.cycleMin}}:{{rep.cycleSec}} at {{rep.pace}} pace</li>
+{{else}}
+    <li>(click "+" to add to this swim set)</li>
+{{/each}}
+</ul>
+
+<form name="{{setName}}">
+<p>{{#each kNumReps as |v|}}&nbsp;{{v}}{{/each}}</p>
+<p>{{#each kDistance as |v|}}&nbsp;{{v}}{{/each}}</p>
+<p>{{#each kStroke as |v|}}&nbsp;{{v}}{{/each}}</p>
+<p>{{#each kCycleMin as |v|}}&nbsp;{{v}}{{/each}}</p>
+<p>{{#each kCycleSec as |v|}}&nbsp;{{v}}{{/each}}</p>
+<p>{{#each kPace as |v|}}&nbsp;{{v}}{{/each}}</p>
+<button>+</button>
+</form>
