@@ -9,11 +9,21 @@
 </ul>
 
 <form name="{{setName}}">
-<p>{{#each kNumReps as |v|}}&nbsp;{{v}}{{/each}}</p>
-<p>{{#each kDistance as |v|}}&nbsp;{{v}}{{/each}}</p>
-<p>{{#each kStroke as |v|}}&nbsp;{{v}}{{/each}}</p>
-<p>{{#each kCycleMin as |v|}}&nbsp;{{v}}{{/each}}</p>
-<p>{{#each kCycleSec as |v|}}&nbsp;{{v}}{{/each}}</p>
-<p>{{#each kPace as |v|}}&nbsp;{{v}}{{/each}}</p>
+{{drop-down-list kNumReps name='numReps'}}
+&nbsp;
+&nbsp;
+{{drop-down-list kDistance name='distance'}}
+{{drop-down-list kStroke name='stroke'}}
+&nbsp;
+&nbsp;
+{{drop-down-list kCycleMin name='cycleMin'}}
+:
+{{drop-down-list kCycleSec name='cycleSec'}}
+&nbsp;
+&nbsp;
+{{drop-down-list kPace name='pace'}}
+{{!-- drop-down-list kTrend name='trend' --}}
+&nbsp;
+&nbsp;
 <button>+</button>
 </form>
