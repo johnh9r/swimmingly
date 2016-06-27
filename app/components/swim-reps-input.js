@@ -84,6 +84,7 @@ export default Ember.Component.extend({
     // component lifecycle guarantees to run init() prior to didInsertElement()
     init() {
         this._super(...arguments);  // indirectly extends Ember.Object
+        this.classNames = ['swim-set', 'swim-set-' + Ember.String.dasherize(this.get('setName'))];
         // must not initialise ref type property statically or else shared by all instances (sic!)
         this.widgetMap = new Map();
     },

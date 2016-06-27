@@ -1,0 +1,28 @@
+div#all-content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    color: white;
+    background-color: grey;
+    font-weight: bold;
+}
+
+body {
+    font-family: Verdana, Geneva, Arial, sans-serif;
+}
+
+div.swim-set {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+div.swim-set-warmup, div.swim-set-cooldown {
+    background-color: gainsboro;
+}
+
+div.swim-set-main {
+    background-color: powderblue;
+}
