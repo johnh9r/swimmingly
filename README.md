@@ -1,7 +1,6 @@
 # Swimmingly
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a toy application to explore the Ember.js framework.  As such, it does not do anything useful (yet).
 
 ## Prerequisites
 
@@ -25,14 +24,10 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+* There are no tests implemented (yet).
+* This would be unacceptable in a production project -- but: my sandpit, my rules. :-)
 
 ### Building
 
@@ -41,7 +36,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Disclaimer: This toy application has only ever been exercised with Ember's embedded web server and a Firefox desktop browser.
 
 ## Further Reading / Useful Links
 
@@ -50,4 +45,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
